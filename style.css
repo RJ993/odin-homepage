@@ -81,10 +81,8 @@ header > div {
     background-color: white;
     box-shadow: 0em 0.4em 1em rgba(0, 0, 0, 0.433);
     padding: 1.5em 2.25em;
-}
-
-header > div > h2 {
-    margin-bottom: 0.4em;
+    display: flex;
+    flex-direction: column;
 }
 
 div.work {
@@ -105,11 +103,33 @@ ul {
 
 footer > h2 {
     margin-bottom: 0.5em;
-    
 }
 
 footer > p {
     margin-bottom: 1em;
+}
+
+header > div > h2 {
+    margin-bottom: 0.4em;
+}
+
+header > div > p {
+    margin-bottom: 1em;
+}
+
+button.socials > .github, button.socials  {
+    min-width: 5em;
+}
+
+button {
+    border: none;
+    background: none;
+    width: 4em;
+    align-self: flex-end;
+}
+
+button > .github {
+    max-width: 4em;
 }
 
 @media (max-width: 1000px) {
@@ -119,5 +139,5 @@ footer > p {
 }
 
 @media (max-width: 500px) {
-  
+
 }
