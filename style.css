@@ -151,11 +151,34 @@ button > .github {
 }
 
 @media (max-width: 1000px) {
-  div.work {
+    div.work {
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-}
+    }
+    div.work > div > div {
+        background-color: rgb(169, 172, 5);
+    }
+
+    div.work > div:nth-child(even) > div {
+        background-color: rgb(3, 3, 132);
+    }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+    div.work > div > div {
+    background-color: rgb(94, 5, 172);
+    }
 
+    div.work > div:nth-child(even) > div {
+        background-color: rgb(132, 96, 3);
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section > h2 {
+        margin-left: 0;
+    }
 }
