@@ -64,6 +64,10 @@ section {
     grid-row: 2 / 4;
 }
 
+section > h2 {
+    margin-left: 0.5em;
+}
+
 div.work {
     padding: 2em 0;
     display: grid;
@@ -91,6 +95,14 @@ div.work > div:nth-child(even) > div {
     background-color: rgb(146, 4, 4);
 }
 
+div.work > div > div + div, div.work > div:nth-child(even) > div + div {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.1em 0 0 ;
+}
+
 footer {
     background-color: rgb(2, 184, 225);
     grid-row: 4;
@@ -107,19 +119,35 @@ ul {
     margin-bottom: 1em
 }
 
+/* ______________ */
+
 button.socials > .github, button.socials  {
     min-width: 5em;
 }
 
+li.contact-info {
+    display: flex;
+    margin-bottom: 0.5em;
+    align-items: center;
+}
+
+.gen {
+   min-width: 1.5em; 
+   margin-right: 1em;
+}
 button {
     border: none;
     background: none;
-    width: 4em;
+    width: 2.5em;
     align-self: flex-end;
 }
 
+.external-icon {
+    width: 2.5em;
+}
+
 button > .github {
-    max-width: 4em;
+    max-width: 4.5em;
 }
 
 @media (max-width: 1000px) {
