@@ -44,6 +44,11 @@ p {
     margin-bottom: 1em;
 }
 
+picture > img {
+    width: 20em;
+    
+}
+
 header {
     background-image: linear-gradient(170deg, rgb(2, 184, 225) 0 55%, rgba(0, 0, 0, 0.295) 55%, white 57% 100%);
     padding: 4em 6em;
@@ -106,11 +111,15 @@ div.work > div > div + div, div.work > div:nth-child(even) > div + div {
 footer {
     background-color: rgb(2, 184, 225);
     grid-row: 4;
-    padding: 2em 3em;
+    padding: 2em 2em;
     font-size: 3.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
 }
 
-footer, footer > h2 {
+footer, footer > div > h2 {
     color: white
 }
 
@@ -161,6 +170,9 @@ button > .github {
 
     div.work > div:nth-child(even) > div {
         background-color: rgb(3, 3, 132);
+    }
+    picture > img {
+        width: 12em;
     }
 }
 
