@@ -15,6 +15,10 @@ html {
     font-size: 62.5%;
 }
 
+img, picture, video, canvas, svg {
+  display: block;
+}
+
 body {
     font-family: Roboto, Arial, Helvetica, sans-serif;
     margin: 0 auto;
@@ -44,7 +48,7 @@ p {
     margin-bottom: 1em;
 }
 
-picture > img {
+.spider-man-contact {
     width: 20em;
     
 }
@@ -160,25 +164,69 @@ button > .github {
     width: 2.5em;
 }
 
+@media (min-width: 1660px) {
+    div.work {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    }
+}
+
 @media (max-width: 1200px) {
+    body {
+         font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 5rem;
+    }
+
+    h3 {
+    font-size: 2.5rem;
+    margin: 0.5em 0;
+    }
+
     div.work {
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     }
+    
     div.work > div > div {
         background-color: rgb(169, 172, 5);
+        font-size: 3.5rem;
     }
 
     div.work > div:nth-child(even) > div {
         background-color: rgb(3, 3, 132);
     }
-    picture > img {
-        width: 12em;
+
+    footer {
+    font-size: 2.4rem;
+    }
+
+    .spider-man-contact {
+        width: 12em
     }
 }
 
 @media (max-width: 600px) {
+    body {
+         font-size: 1.3rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+    font-size: 1.8rem;
+    margin: 0.5em 0;
+    }
+
+    div.work {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+
     div.work > div > div {
     background-color: rgb(94, 5, 172);
+     font-size: 3rem;
     }
 
     div.work > div:nth-child(even) > div {
@@ -189,9 +237,53 @@ button > .github {
         display: flex;
         flex-direction: column;
         align-items: center;
+        font-size: 1.2rem;
     }
 
     section > h2 {
         margin-left: 0;
     }
+
+    footer {
+    padding: 0;
+    flex-direction: column;
+    font-size: 2rem;
+    }
+
+    footer > div {
+        display: flex;
+        flex-direction: column;
+        padding: 2em;
+    }
+
+    footer > div > h2, footer > div > button {
+        align-self: center;
+    }
+
+    li.contact-info {
+        font-size: 2rem;
+    }
+
+    .spider-man-contact {
+        width: 100vw;
+    }
+
+    .gen {
+   display: none;
+    }
+
+    button.socials > .github, button.socials  {
+    max-width: 4em;
+    min-width: 3em;
+    }
+
+    button > .github {
+        max-width: 3.5em;
+    }
+
+    .external-icon {
+        width: 2.2em;
+    }
 }
+
+/* For a much better example for how to use media queries, watch Kevin Powell's Media Query video posted in the big 2025. Please future me, for the sake for my sanity. Thank you. Love you. */
