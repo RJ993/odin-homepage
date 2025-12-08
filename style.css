@@ -19,6 +19,17 @@ img, picture, video, canvas, svg {
   display: block;
 }
 
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
 body {
     font-family: Roboto, Arial, Helvetica, sans-serif;
     margin: 0 auto;
@@ -286,6 +297,14 @@ li.contact-info {
     flex-direction: column;
     align-items: center;
     gap: 6em
+    }
+
+    .about-info > h2 {
+        align-self: center;
+    }
+
+    .about-info > button {
+        align-self: center;
     }
 
     .about-button {
