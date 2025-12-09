@@ -30,6 +30,11 @@ h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
 
+#root,
+#__next {
+  isolation: isolate;
+}
+
 body {
     font-family: Roboto, Arial, Helvetica, sans-serif;
     margin: 0 auto;
@@ -87,6 +92,8 @@ header {
     background-image: linear-gradient(170deg, rgb(2, 184, 225) 0 55%, rgba(0, 0, 0, 0.295) 55%, white 57% 100%);
     padding: 4em 6em;
     grid-row: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 header > div {
@@ -101,13 +108,16 @@ header > div {
 .about-info {
     display: flex;
     flex-direction: column;
+    min-height: min-content;
 }
 
 .about-container{
     width: 18em;
+    max-height: min-content;
     transform: scale(1.5); 
     position: relative;
     text-align: center;
+    box-shadow: 0em 0.4em 1em rgba(0, 0, 0, 0.433);
 }
 
 .about-img {
@@ -211,9 +221,10 @@ li.contact-info {
     }
 
     h1 {
-    left: 0;
-    top: 0;
+    left: 41vw;
+    top: -0.6em;
     font-size: 6rem;
+    text-shadow: 0em 0.3em 0.4em rgb(0, 0, 0);
     }
 
     h2 {
@@ -223,6 +234,46 @@ li.contact-info {
     h3 {
     font-size: 2.5rem;
     margin: 0.5em 0;
+    }
+
+    header {
+        padding: 7em 6em 4em;
+    }
+
+    header > div {
+    background-color: white;
+    box-shadow: 0em 0.4em 1em rgba(0, 0, 0, 0.433);
+    padding: 1.5em 2.25em;
+    display: block;
+    }
+
+       .about-info {
+        display: block;
+        }
+
+        .about-info > h2 {
+        align-self: center;
+        text-align: center;
+    }
+
+    .about-container{
+        width: 15em;
+        display: flex;
+        transform: scale(1.2) translateX(-3em) translateY(-3em); 
+        position: relative;
+        text-align: center;
+        float: left;
+        z-index: 2;
+        margin-right: -2rem;
+        margin-bottom: -4rem;
+    }
+
+    .about-img {
+    width: 15em;
+    }
+
+     .about-button {
+        display: none;
     }
 
     div.work {
@@ -262,7 +313,8 @@ li.contact-info {
     top: 4em;
     color: white;
     font-size: 4rem;
-    z-index: 1
+    z-index: 1;
+    text-shadow: none;
     }
 
     h2 {
@@ -285,22 +337,23 @@ li.contact-info {
 
     header {
     background-image: linear-gradient(170deg, rgb(2, 184, 225) 0 44%, rgba(0, 0, 0, 0.295) 44%, white 46% 100%);
-    padding: 2em 3em;
+    padding: 1em 3em;
     grid-row: 1;
 }
 
     header > div {
     background: none;
     box-shadow: none;
-    padding: 1.5em 2.25em;
+    padding: 0.5em 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 6em
     }
 
-    .about-info > h2 {
-        align-self: center;
+    .about-info {
+        display: flex;
+        flex-direction: column;
     }
 
     .about-info > button {
@@ -312,7 +365,7 @@ li.contact-info {
     }
 
     .about-container {
-    transform: scale(1.5); 
+    transform: scale(1.2); 
     width: 12em;
     position: relative;
     text-align: center;
